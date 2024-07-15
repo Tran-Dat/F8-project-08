@@ -28,8 +28,12 @@
 }
 
 .top-menu {
+    --main-column-width: 292px;
+
+    position: relative;
+
     &__main {
-        width: 292px;
+        width: var(--main-column-width);
         max-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
         border-right: 1px solid var(--top-menu-border-color);
         overflow-y: auto;
@@ -90,5 +94,10 @@
             color: #0071dc;
             font-weight: 500;
         }
+    }
+
+    .sub-menu {
+        position: absolute;
+        inset: 0 0 0 var(--main-column-width);
     }
 }
