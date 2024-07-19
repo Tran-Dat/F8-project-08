@@ -1206,14 +1206,15 @@ select {
 }
 html {
   --text-color: #1a162e;
-  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(31%)
-      saturate(1210%) hue-rotate(210deg) brightness(91%) contrast(96%);
+  --icon-color: brightness(0) saturate(100%) invert(8%) sepia(31%) saturate(1210%) hue-rotate(210deg) brightness(91%)
+      contrast(96%);
   --body-bg: #f6f6f6;
   --header-bg-color: #eee;
   --top-action-group-bg: #fff;
   --top-action-group-shadow: rgba(237, 237, 246, 0.2);
   --top-action-group-separate: #ededf6;
   --dropdown-bg-color: #fff;
+  --dropdown-text-color: #1a162e;
   --dropdown-shadow-color: rgba(200, 200, 200, 0.4);
   --top-menu-border-color: #d2d1d6;
 }
@@ -1226,21 +1227,21 @@ html {
 
 html.dark {
   --text-color: #fff;
-  --icon-color: brightness(0) saturate(100%) invert(97%) sepia(57%)
-      saturate(238%) hue-rotate(282deg) brightness(112%) contrast(100%);
+  --icon-color: brightness(0) saturate(100%) invert(97%) sepia(57%) saturate(238%) hue-rotate(282deg) brightness(112%)
+      contrast(100%);
   --body-bg: #292e39;
   --header-bg-color: #171c28;
   --top-action-group-bg: #292e39;
   --top-action-group-shadow: rgba(0, 0, 0, 0.2);
   --top-action-group-separate: #ededf6;
   --dropdown-bg-color: #2f3441;
+  --dropdown-text-color: #b9babe;
   --dropdown-shadow-color: rgba(23, 28, 40, 0.4);
-  --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(7%)
-      saturate(2048%) hue-rotate(186deg) brightness(96%) contrast(84%);
+  --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(7%) saturate(2048%) hue-rotate(186deg)
+      brightness(96%) contrast(84%);
   --top-menu-border-color: #171c28;
-  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%)
-      sepia(26%) saturate(5526%) hue-rotate(180deg) brightness(112%)
-      contrast(94%);
+  --menu-column-icon-color: brightness(0) saturate(100%) invert(100%) sepia(26%) saturate(5526%) hue-rotate(180deg)
+      brightness(112%) contrast(94%);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1403,6 +1404,8 @@ html.dark {
   left: 0;
   width: min(1240px, 100%);
   padding-top: 54px;
+  display: none;
+  color: var(--dropdown-text-color);
 }
 .dropdown__inner {
   --inner-padding: 30px;
@@ -1423,11 +1426,12 @@ html.dark {
 
 .top-menu {
   --main-column-width: 292px;
+  --max-inner-height: calc(min(595px, 100vh - 158px) - var(--inner-padding) * 2);
   position: relative;
 }
 .top-menu__main {
   width: var(--main-column-width);
-  height: calc(min(595px, 100vh - 158px) - var(--inner-padding) * 2);
+  height: var(--max-inner-height);
   border-right: 1px solid var(--top-menu-border-color);
   overflow-y: auto;
 }
@@ -1471,10 +1475,10 @@ html.dark {
 .menu-column__list {
   margin-top: 19px;
 }
-.menu-column__item:hover .sub-menu {
+.menu-column__item--active .sub-menu {
   display: grid;
 }
-.menu-column__item:hover > .menu-column__link {
+.menu-column__item--active > .menu-column__link, .menu-column__item:hover > .menu-column__link {
   color: #0071dc;
   font-weight: 500;
 }
@@ -1488,7 +1492,8 @@ html.dark {
   color: #0071dc;
   font-weight: 500;
 }
-.menu-column .sub-menu {
+
+.sub-menu {
   position: absolute;
   inset: 0 0 0 var(--main-column-width);
   display: none;
@@ -1496,6 +1501,14 @@ html.dark {
   gap: var(--inner-padding);
   padding-left: var(--inner-padding);
   overflow-y: auto;
+}
+.sub-menu--not-main {
+  position: initial;
+  inset: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: var(--max-inner-height);
+  padding-left: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
