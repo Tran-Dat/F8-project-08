@@ -1642,6 +1642,11 @@ html.dark {
     content: none;
   }
 }
+@media (max-width: 575.98px) {
+  .dropdown__inner {
+    padding: 0 40px;
+  }
+}
 
 .top-menu {
   --main-column-width: 292px;
