@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 .filter-wrap {
     position: relative;
     z-index: 1;
@@ -13,12 +15,31 @@
 
     background: var(--filter-form-bg);
     filter: drop-shadow(0px 40px 90px var(--filter-form-shadow));
+    transition: opacity, visibility;
+    transition-duration: 0.2s;
+
+    @include abstracts.screen(xl) {
+        height: calc(100vh - 80px);
+        padding-bottom: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    @include abstracts.screen(sm) {
+        width: 85vw;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
 
     &__arrow {
         position: absolute;
         top: -15px;
         right: 25px;
         height: 20.5px;
+        filter: var(--filter-form-arrow);
     }
 
     &__heading {
@@ -107,6 +128,10 @@
                 border: 1px solid #d2d1d6;
                 line-height: 200.857%;
             }
+
+            @include abstracts.screen(sm) {
+                width: 100%;
+            }
         }
 
         &-text-input--small &-input {
@@ -188,18 +213,35 @@
         width: 1px;
         background: #eee;
         margin: 0 30px;
+
+        @include abstracts.screen(xl) {
+            width: 100%;
+            height: 1px;
+            margin: 30px 0;
+        }
     }
 
     &__footer {
         display: flex;
         justify-content: flex-end;
         margin-top: 32px;
+
+        @include abstracts.screen(xl) {
+            position: sticky;
+            bottom: 0;
+            padding-bottom: 16px;
+            background: #fff;
+        }
     }
 
     &__cancel,
     &__submit {
         height: 38px;
         padding: 0 10x;
+
+        @include abstracts.screen(sm) {
+            flex: 1;
+        }
     }
 
     &__cancel {
@@ -208,5 +250,11 @@
 
     &__submit {
         font-style: 1.4rem;
+    }
+
+    &__content {
+        @include abstracts.screen(xl) {
+            flex-direction: column;
+        }
     }
 }
