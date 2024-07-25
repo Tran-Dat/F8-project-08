@@ -1,0 +1,216 @@
+@use "../abstracts";
+
+.footer {
+    margin-top: 100px;
+    padding: 60px 0;
+    background: var(--footer-bg-color);
+    background-image: var(--footer-bg-img);
+    border-top-left-radius: 155px;
+    border-top-right-radius: 155px;
+
+    @include abstracts.screen(md) {
+        padding: 80px 0 60px 0;
+    }
+
+    &__title {
+        padding-bottom: 60px;
+        text-align: center;
+        font-weight: 900;
+        font-size: 4rem;
+
+        @include abstracts.screen(md) {
+            font-size: 3rem;
+            padding: 0 20px 60px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 450px;
+        margin: 0 auto;
+        padding: 5px 5px 5px 25px;
+        border-radius: 99px;
+
+        background: var(--filter-form-bg);
+
+        &--input {
+            font-size: 1.6rem;
+            font-weight: 500;
+            opacity: 0.8;
+        }
+
+        &--submit.btn {
+            padding: 0 30px;
+            border-radius: 99px;
+            font-size: 1.6rem;
+            font-weight: 600;
+            background: var(--footer-btn-subscribe);
+            color: var(--footer-btn-subscribe-color);
+        }
+    }
+
+    &__group {
+        margin-top: 60px;
+    }
+
+    &__row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 60px;
+
+        @include abstracts.screen(xxl) {
+            gap: 40px;
+        }
+
+        @include abstracts.screen(xl) {
+            grid-template-columns: 2fr 1fr 0.5fr 1fr;
+            gap: 40px;
+        }
+
+        @include abstracts.screen(lg) {
+            grid-template-columns: 2fr 0.6fr;
+            gap: 40px;
+        }
+
+        @include abstracts.screen(md) {
+            grid-template-columns: 2.5fr 1fr;
+            gap: 40px;
+        }
+
+        @include abstracts.screen(sm) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__logo,
+    &__logo.logo {
+        display: flex;
+        align-items: center;
+        margin-top: -20px;
+
+        @include abstracts.screen(lg) {
+            margin-left: 0;
+        }
+
+        &--img,
+        &--img.logo__img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+
+            @include abstracts.screen(xxl) {
+                width: 40px;
+                height: 40px;
+            }
+
+            @include abstracts.screen(lg) {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &--title.logo__title {
+            font-size: 3.5rem;
+
+            @include abstracts.screen(xxl) {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__paragraph {
+        font-size: 1.7rem;
+        margin-top: 20px;
+        padding-right: 30px;
+        line-height: 169.99%;
+
+        @include abstracts.screen(xxl) {
+            padding: 0;
+        }
+    }
+
+    &__socails {
+        margin: 30px 0 0 15px;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    &__item-icon {
+        width: 30px;
+        height: 30px;
+        filter: var(--footer-social-icon-color);
+
+        @include abstracts.screen(md) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &__heading {
+        font-size: 2.5rem;
+        font-weight: 500;
+    }
+
+    &__list {
+        margin-top: 20px;
+    }
+
+    &__link {
+        padding: 8px 0;
+        display: inline-block;
+
+        &:hover {
+            font-weight: 500;
+            color: var(--footer-btn-subscribe);
+        }
+
+        @include abstracts.screen(xl) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__label {
+        margin-top: 20px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        pointer-events: none;
+
+        &--phone,
+        &--mail {
+            margin-bottom: 10px;
+        }
+
+        @include abstracts.screen(xl) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__text {
+        margin-top: 8px;
+
+        &--special {
+            font-weight: 500;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        @include abstracts.screen(xl) {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+    }
+
+    &__bottom {
+        margin-top: 70px;
+    }
+
+    &__copyright {
+        text-align: center;
+        font-weight: 500;
+        opacity: 0.5;
+    }
+}

@@ -7,6 +7,9 @@ html {
 
     --body-bg: #f6f6f6;
     --header-bg-color: #eee;
+    --footer-bg-color: #ff00b7;
+    --footer-bg-img: linear-gradient(225deg, #ff00b7 10%, #e5ff00 99%);
+
     --top-action-group-bg: #fff;
     --top-action-group-shadow: rgba(237, 237, 246, 0.2);
     --top-action-group-separate: #ededf6;
@@ -47,4 +50,10 @@ html {
     --filter-form-bg: #fff;
     --filter-form-shadow: rgba(200, 200, 200, 0.4);
     --filter-form-tag-bg: #f8f8fb;
+
+    // Footer
+    --footer-btn-subscribe: #6e44ff;
+    --footer-btn-subscribe-color: #fff;
+    --footer-social-icon-color: brightness(0) saturate(100%) invert(68%) sepia(3%) saturate(8%) hue-rotate(13deg)
+        brightness(94%) contrast(84%);
 }
