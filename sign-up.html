@@ -57,16 +57,28 @@
                     <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text--input">
-                                <input type="email" name="" id="" placeholder="Email" class="form__input" />
+                                <input type="email" name="" id="" placeholder="Email" class="form__input" required />
                                 <img src="./assets/icons/message.svg" alt="" class="form__input--icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input--icon-error" />
                             </div>
+                            <p class="form__error">Invalid Email Please Try Again!</p>
                         </div>
 
                         <div class="form__group">
                             <div class="form__text--input">
-                                <input type="password" name="" id="" placeholder="Password" class="form__input" />
-                                <img src="./assets/icons/lock.svg" alt="" class="form__input-icon" />
+                                <input
+                                    type="password"
+                                    name=""
+                                    id=""
+                                    placeholder="Password"
+                                    class="form__input"
+                                    required
+                                    minlength="6"
+                                />
+                                <img src="./assets/icons/lock.svg" alt="" class="form__input--icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input--icon-error" />
                             </div>
+                            <p class="form__error">Passwords Must Be At Least 6 Characters</p>
                         </div>
 
                         <div class="form__group">
@@ -77,14 +89,18 @@
                                     id=""
                                     placeholder="Confirm Password"
                                     class="form__input"
+                                    required
+                                    minlength="6"
                                 />
                                 <img src="./assets/icons/lock.svg" alt="" class="form__input--icon" />
+                                <img src="./assets/icons/form-error.svg" alt="" class="form__input--icon-error" />
                             </div>
+                            <p class="form__error">Passwords Must Be At Least 6 Characters</p>
                         </div>
 
                         <div class="form__group form__group--inline">
                             <label class="form__checkbox">
-                                <input type="checkbox" name="" id="" class="form__checkbox--input" />
+                                <input type="checkbox" name="" id="" class="form__checkbox--input d-none" />
 
                                 <span class="form__checkbox--label">Set as default card</span>
                             </label>
@@ -92,10 +108,10 @@
                         </div>
 
                         <div class="form__group auth__btn--group">
-                            <button class="btn btn--primary auth__btn">Sign Up</button>
+                            <button class="btn btn--primary auth__btn form__submit--btn">Sign Up</button>
                             <button class="btn btn--outline btn--no-margin">
                                 <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
-                                Sign in with Gmail
+                                Sign in with Google
                             </button>
                         </div>
                     </form>
