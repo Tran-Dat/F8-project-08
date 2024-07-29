@@ -166,6 +166,7 @@ button {
 a,
 img,
 button,
+label,
 input,
 textarea,
 select {
@@ -1441,6 +1442,10 @@ html.dark {
 }
 @media (max-width: 767.98px) {
   .top-bar__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
     margin-left: 0px;
   }
 }
@@ -2697,6 +2702,11 @@ html.dark {
 .auth {
   display: flex;
   min-height: 100vh;
+}
+@supports (-webkit-touch-callout: none) {
+  .auth {
+    min-height: -webkit-fill-available;
+  }
 }
 .auth__intro, .auth__content {
   flex: 1;
