@@ -26,23 +26,15 @@
     <body>
         <main class="auth">
             <!-- Auth Intro -->
-            <div class="auth__intro">
-                <a href="./" class="logo auth__intro--logo d-none d-md-flex">
-                    <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img" />
-                    <h2 class="logo__title">grocerymart</h2>
-                </a>
+            <div class="auth__intro d-md-none">
                 <img src="./assets/img/auth/intro.svg" alt="" class="auth__intro--img" />
                 <p class="auth__intro--text">
                     The best of luxury brand values, high quality products, and innovative services
                 </p>
-
-                <button class="auth__intro--next d-none d-md-flex js-toggle" toggle-target="#auth__content">
-                    <img src="./assets/img/auth/intro-arrow.svg" alt="" />
-                </button>
             </div>
 
             <!-- Auth Content -->
-            <div id="auth__content" class="auth__content hide">
+            <div class="auth__content">
                 <div class="auth__content--inner">
                     <!-- Logo -->
                     <a href="./" class="logo">
@@ -60,7 +52,15 @@
                     <form action="./index-logined.html" class="form auth__form">
                         <div class="form__group">
                             <div class="form__text--input">
-                                <input type="email" name="" id="" placeholder="Email" class="form__input" required />
+                                <input
+                                    type="email"
+                                    name=""
+                                    id=""
+                                    placeholder="Email"
+                                    value="admin@grocerymart.com"
+                                    class="form__input"
+                                    required
+                                />
                                 <img src="./assets/icons/message.svg" alt="" class="form__input--icon" />
                                 <img src="./assets/icons/form-error.svg" alt="" class="form__input--icon-error" />
                             </div>
@@ -74,6 +74,7 @@
                                     name=""
                                     id=""
                                     placeholder="Password"
+                                    value="******"
                                     class="form__input"
                                     required
                                     minlength="6"
@@ -94,17 +95,17 @@
                         </div>
 
                         <div class="form__group auth__btn--group">
-                            <button class="btn btn--primary auth__btn form__submit--btn">Login</button>
+                            <button class="btn btn--primary auth__btn form__submit--btn">Sign In</button>
                             <button class="btn btn--outline btn--no-margin">
-                                <img src="./assets/icons/google.svg" alt="" class="btn__icon" />
+                                <img src="./assets/icons/google.svg" alt="" class="btn__icon icon" />
                                 Sign in with Google
                             </button>
                         </div>
                     </form>
 
                     <p class="auth__text">
-                        You have an account yet?
-                        <a href="./sign-in.html" class="auth__link auth__text--link">Sign In</a>
+                        Don’t have an account yet?
+                        <a href="./sign-up.html" class="auth__link auth__text--link">Sign Up</a>
                     </p>
                 </div>
             </div>
