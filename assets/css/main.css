@@ -1370,10 +1370,12 @@ html {
   --prod-detail-info-bg: #f6f6f6;
   --prod-detail-info-tag: #ededf6;
   --prod-detail-info-content-bg: #fff;
+  --prod-detail-item-current: #1a162e;
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow: rgba(237, 237, 246, 0.2);
   --search-bar-bg: #fff;
   --review-card-bg: #fafafd;
+  --text-content-hr-bg: #ebebeb;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1400,6 +1402,11 @@ html {
 @media (max-width: 767.98px) {
   html {
     --breadcrumbs-bg: #fff;
+  }
+}
+@media (max-width: 767.98px) {
+  html {
+    --review-card-bg: #fff;
   }
 }
 
@@ -1442,9 +1449,12 @@ html.dark {
   --prod-detail-info-bg: #171c28;
   --prod-detail-info-tag: #292e39;
   --prod-detail-info-content-bg: transparent;
+  --prod-detail-item-current: #fff;
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow: rgba(23, 28, 40, 0.2);
   --search-bar-bg: #171c28;
+  --review-card-bg: #171c28;
+  --text-content-hr-bg: #3e4043;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2933,13 +2943,13 @@ html.dark {
   text-align: center;
 }
 .text-content a {
-  color: #ffb700;
+  color: #0071dc;
   text-decoration: underline;
 }
 .text-content blockquote {
-  background: rgba(255, 183, 0, 0.1);
+  background: rgba(119, 218, 230, 0.1);
   padding: 20px;
-  border-left: 3px solid #ffb700;
+  border-left: 3px solid #77dae6;
 }
 .text-content blockquote p {
   margin: 0;
@@ -2948,7 +2958,7 @@ html.dark {
   border: none;
   height: 1.5px;
   margin: 40px 0;
-  background: #ebebeb;
+  background: var(--text-content-hr-bg);
 }
 
 .home {
@@ -3394,7 +3404,7 @@ html.dark {
   cursor: pointer;
 }
 .prod-tab__item--current {
-  color: #1a162e;
+  color: var(--prod-detail-item-current);
 }
 .prod-tab__contents {
   padding-top: 30px;
@@ -3405,11 +3415,14 @@ html.dark {
 .prod-tab__content--current {
   display: block;
 }
+.prod-tab__text-content {
+  margin-top: -25px;
+}
 
 .prod-content__heading {
   margin-bottom: 30px;
-  font-size: 2.4rem;
-  font-weight: 700;
+  font-size: 2.2rem;
+  font-weight: 600;
   line-height: 141.667%;
 }
 

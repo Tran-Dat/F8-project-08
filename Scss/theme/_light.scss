@@ -67,6 +67,7 @@ html {
     --prod-detail-info-bg: #f6f6f6;
     --prod-detail-info-tag: #ededf6;
     --prod-detail-info-content-bg: #fff;
+    --prod-detail-item-current: #1a162e;
 
     @include abstracts.screen(md) {
         --product-detail-bg: #fafafd;
@@ -86,4 +87,10 @@ html {
 
     // Review Card
     --review-card-bg: #fafafd;
+    @include abstracts.screen(md) {
+        --review-card-bg: #fff;
+    }
+
+    // Text Content
+    --text-content-hr-bg: #ebebeb;
 }

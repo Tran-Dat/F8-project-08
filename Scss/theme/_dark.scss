@@ -63,6 +63,7 @@ html.dark {
     --prod-detail-info-bg: #171c28;
     --prod-detail-info-tag: #292e39;
     --prod-detail-info-content-bg: transparent;
+    --prod-detail-item-current: #fff;
 
     @include abstracts.screen(md) {
         --product-detail-bg: #292e39;
@@ -80,4 +81,10 @@ html.dark {
 
     // Search bar
     --search-bar-bg: #171c28;
+
+    // Review Card
+    --review-card-bg: #171c28;
+
+    // Text Content
+    --text-content-hr-bg: #3e4043;
 }
