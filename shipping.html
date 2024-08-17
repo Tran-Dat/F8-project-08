@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -470,9 +470,9 @@
         <div id="add-new-address" class="modal show" style="--content-width: 650px">
             <!-- <button class="modal__close">&times;</button> -->
             <div class="modal__content">
-                <h2 class="modal__heading">Add a new shopping address</h2>
-                <div class="modal__body">
-                    <form action="" class="form">
+                <form action="" class="form">
+                    <h2 class="modal__heading">Add a new shipping address</h2>
+                    <div class="modal__body">
                         <div class="form__row">
                             <!-- Name -->
                             <div class="form__group">
@@ -548,20 +548,16 @@
                                 <span class="form__checkbox--label">Set as default address</span>
                             </label>
                         </div>
-                    </form>
-                </div>
-                <div class="modal__bottom">
-                    <button class="btn btn--text btn--small modal__btn js-toggle" toggle-target="#add-new-address">
-                        Cancel
-                    </button>
-                    <button
-                        class="btn btn--primary btn--small modal__btn btn--no-margin js-toggle"
-                        toggle-target="#add-new-address"
-                    >
-                        Create
-                    </button>
-                </div>
+                    </div>
+                    <div class="modal__bottom">
+                        <button class="btn btn--text btn--small modal__btn js-toggle" toggle-target="#add-new-address">
+                            Cancel
+                        </button>
+                        <button class="btn btn--primary btn--small modal__btn btn--no-margin">Create</button>
+                    </div>
+                </form>
             </div>
+
             <div class="modal__overlay"></div>
         </div>
     </body>
