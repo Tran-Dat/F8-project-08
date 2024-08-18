@@ -88,11 +88,12 @@
         border-radius: 99px;
     }
 
-    &[disabled] {
-        opacity: 0.5;
-        pointer-events: none;
+    &--danger {
+        color: #fff;
+        background: #ed4337;
     }
 
+    &[disabled],
     &--disabled {
         opacity: 0.5;
         pointer-events: none;
