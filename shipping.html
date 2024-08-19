@@ -450,7 +450,7 @@
         <div id="delete-confirm" class="modal modal--small hide">
             <!-- <button class="modal__close">&times;</button> -->
             <div class="modal__content">
-                <div class="modal__text">Lorem ipsum dolor sit amet consectetur.</div>
+                <div class="modal__text">Do you want to remote this item.</div>
                 <div class="modal__bottom">
                     <button class="btn btn--outline btn--small modal__btn js-toggle" toggle-target="#delete-confirm">
                         Cancel
@@ -533,8 +533,9 @@
                                 <input
                                     type="text"
                                     name=""
-                                    id="city"
                                     placeholder="City/District/Town"
+                                    id="city"
+                                    readonly
                                     class="form__input js-toggle"
                                     toggle-target="#city-dialog"
                                 />
@@ -610,7 +611,12 @@
                         <button class="btn btn--text btn--small modal__btn js-toggle" toggle-target="#add-new-address">
                             Cancel
                         </button>
-                        <button class="btn btn--primary btn--small modal__btn btn--no-margin">Create</button>
+                        <button
+                            class="btn btn--primary btn--small modal__btn btn--no-margin js-toggle"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
                     </div>
                 </form>
             </div>
