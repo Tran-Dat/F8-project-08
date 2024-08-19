@@ -230,12 +230,12 @@ $error-color: #ed4337;
         display: flex;
         align-items: center;
 
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
         padding: 0 12px;
         border-radius: 10px;
 
         &:focus-within {
-            border: 1.5px solid #77dae6;
+            border: 1px solid #77dae6;
         }
     }
 
@@ -303,7 +303,7 @@ $error-color: #ed4337;
         min-width: 230px;
         max-height: 310px;
         padding-bottom: 10px;
-        border: 1.5px solid #d2d1d6;
+        border: 1px solid #d2d1d6;
         border-radius: 10px;
         box-shadow: 0 0 5px var(--form-select-dialog-shadow);
 
@@ -460,7 +460,7 @@ $error-color: #ed4337;
             width: 19px;
             height: 19px;
             border-radius: 5px;
-            border: 1.5px solid #9e9da8;
+            border: 1px solid #9e9da8;
         }
     }
 
