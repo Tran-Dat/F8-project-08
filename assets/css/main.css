@@ -3365,6 +3365,57 @@ html.dark {
   }
 }
 
+.payment-card {
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--bg-color);
+  position: relative;
+  overflow: hidden;
+}
+.payment-card__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.payment-card__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.payment-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.payment-card__number {
+  margin-top: 37px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-card__bottom {
+  display: flex;
+  margin-top: 20px;
+}
+.payment-card__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 175%;
+}
+.payment-card__value {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.payment-card__expired {
+  margin: 0 auto 0 40px;
+}
+.payment-card__circle::before, .payment-card__circle::after {
+  content: "";
+}
+
 .home {
   margin-bottom: 50px;
 }
@@ -4382,6 +4433,9 @@ html.dark {
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+.profile__desc {
+  margin-bottom: 16px;
 }
 
 /*# sourceMappingURL=main.css.map */
